@@ -1,15 +1,18 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
+import Container from '@mui/material/Container';
 import { Search } from './features/search/Search';
 import './App.css';
+import ListItems from './components/ListItems';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Search />
-        <Counter />
+        <Container maxWidth='sm'>
+          <Search />
+        </Container>
       </header>
+      <ListItems />
     </div>
   );
 }

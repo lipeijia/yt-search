@@ -1,20 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
 .App-header {
-  min-height: 100vh;
+  background-color: brown;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +9,7 @@
 }
 
 .App-link {
-  color: rgb(112, 76, 182);
+  color: brown;
 }
 
 @keyframes App-logo-float {
