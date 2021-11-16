@@ -1,10 +1,10 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setQuery, searchRequest } from './searchSlice';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import { useDispatch, useSelector } from 'react-redux';
-import { setQuery, searchRequest } from './searchSlice';
 
 export function Search() {
   const dispatch = useDispatch();

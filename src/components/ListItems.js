@@ -1,9 +1,9 @@
 import React, { useRef, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { scrollRequest } from '../features/search/searchSlice';
 import VideoItem from './VideoItem';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { scrollRequest } from '../features/search/searchSlice';
 import Loader from 'react-loader-spinner';
 
 export default function ListItems() {
@@ -13,7 +13,7 @@ export default function ListItems() {
   const dispatch = useDispatch();
 
   // detect when user scrolls to the bottom of the page
-  // https://www.youtube.com/watch?v=NZKUirTtxcg
+  // https://github.com/WebDevSimplified/React-Infinite-Scrolling
   const observer = useRef();
   const lastVideoElementRef = useCallback(
     (node) => {

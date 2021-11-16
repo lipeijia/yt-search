@@ -1,8 +1,8 @@
 import React from 'react';
-import Container from '@mui/material/Container';
 import { Search } from './features/search/Search';
-import './App.css';
 import ListItems from './components/ListItems';
+import Container from '@mui/material/Container';
+import './App.css';
 
 function App() {
   return (
