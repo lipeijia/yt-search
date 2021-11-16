@@ -10,6 +10,7 @@ export const searchRequest = createAsyncThunk(
           part: 'snippet',
           q: query,
           maxResults: 5,
+          type: 'video',
           key: process.env.REACT_APP_YOUTUBE_API_KEY,
         },
       })
@@ -24,7 +25,7 @@ const searchSlice = createSlice({
   name: 'search',
   initialState: {
     query: '',
-    results: {},
+    results: null,
     status: 'idle',
   },
   reducers: {

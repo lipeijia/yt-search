@@ -12,7 +12,9 @@ function App() {
           <Search />
         </Container>
       </header>
-      <ListItems />
+      <Container maxWidth='lg'>
+        <ListItems />
+      </Container>
     </div>
   );
 }
