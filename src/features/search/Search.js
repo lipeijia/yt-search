@@ -3,29 +3,17 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-// import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuery, searchRequest } from './searchSlice';
 
 export function Search() {
   const dispatch = useDispatch();
-  const query = useSelector((state) => state.search.query);
+  const { query } = useSelector((state) => state.search);
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch(searchRequest(query));
-    // const res = await axios.get(
-    //   `https://www.googleapis.com/youtube/v3/search`,
-    //   {
-    //     params: {
-    //       part: 'snippet',
-    //       q: query,
-    //       maxResults: 5,
-    //       key: process.env.REACT_APP_YOUTUBE_API_KEY,
-    //     },
-    //   }
-    // );
-    // console.log(res.data);
   };
+
   return (
     <Paper
       onSubmit={handleSearch}
